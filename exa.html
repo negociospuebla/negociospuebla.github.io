@@ -1,0 +1,916 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+
+<meta name="viewport"
+      content="width=device-width, initial-scale=1.0">
+
+<title>Examen de Computación y Robótica</title>
+
+<style>
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 15px;
+    font-family: Arial, Helvetica, sans-serif;
+    background: #eef2f7;
+    color: #222;
+}
+
+.contenedor {
+    max-width: 750px;
+    margin: auto;
+    background: white;
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 3px 15px rgba(0,0,0,.12);
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 5px;
+}
+
+.subtitulo {
+    text-align: center;
+    color: #555;
+    margin-bottom: 25px;
+}
+
+.datos {
+    display: grid;
+    gap: 10px;
+    margin-bottom: 25px;
+}
+
+.datos input {
+    width: 100%;
+    padding: 12px;
+    font-size: 16px;
+    border: 1px solid #bbb;
+    border-radius: 8px;
+}
+
+.seccion {
+    margin-top: 30px;
+    padding: 12px;
+    background: #e9eef5;
+    border-radius: 8px;
+}
+
+.pregunta {
+    margin-top: 20px;
+    padding: 18px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    background: #fafafa;
+}
+
+.pregunta p {
+    font-weight: bold;
+    margin-top: 0;
+}
+
+label {
+    display: block;
+    padding: 10px;
+    margin: 5px 0;
+    border-radius: 7px;
+    cursor: pointer;
+}
+
+label:hover {
+    background: #e9eef5;
+}
+
+input[type="radio"] {
+    margin-right: 8px;
+}
+
+button {
+    width: 100%;
+    padding: 16px;
+    margin-top: 30px;
+    border: none;
+    border-radius: 10px;
+    background: #1769aa;
+    color: white;
+    font-size: 19px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #0d4f82;
+}
+
+#resultado {
+    display: none;
+    margin-top: 25px;
+    padding: 20px;
+    text-align: center;
+    border-radius: 10px;
+    background: #e8f5e9;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.correcta {
+    background: #c8e6c9 !important;
+}
+
+.incorrecta {
+    background: #ffcdd2 !important;
+}
+
+@media (max-width: 600px) {
+
+    body {
+        padding: 8px;
+    }
+
+    .contenedor {
+        padding: 15px;
+    }
+
+    h1 {
+        font-size: 24px;
+    }
+
+    .pregunta {
+        padding: 14px;
+    }
+
+    button {
+        font-size: 18px;
+    }
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="contenedor">
+
+<h1>Examen de Computación y Robótica</h1>
+
+<div class="subtitulo">
+1.º de Secundaria — Septiembre
+</div>
+
+<div class="datos">
+
+<input type="text"
+       id="nombre"
+       placeholder="Nombre completo">
+
+<input type="text"
+       id="grupo"
+       placeholder="Grupo">
+
+</div>
+
+
+<!-- ========================= -->
+<!-- COMPUTACIÓN -->
+<!-- ========================= -->
+
+<div class="seccion">
+
+<h2>PARTE I — HISTORIA DE LA COMPUTACIÓN</h2>
+
+<p>
+Preguntas 1 a 10
+</p>
+
+</div>
+
+
+<!-- PREGUNTA 1 -->
+
+<div class="pregunta">
+
+<p>1. ¿Cuál es uno de los principales antecedentes de las computadoras modernas?</p>
+
+<label>
+<input type="radio" name="p1" value="a">
+El ábaco
+</label>
+
+<label>
+<input type="radio" name="p1" value="b">
+El teléfono celular
+</label>
+
+<label>
+<input type="radio" name="p1" value="c">
+La televisión
+</label>
+
+<label>
+<input type="radio" name="p1" value="d">
+La cámara digital
+</label>
+
+</div>
+
+
+<!-- PREGUNTA 2 -->
+
+<div class="pregunta">
+
+<p>2. ¿Para qué se utilizaba principalmente el ábaco?</p>
+
+<label>
+<input type="radio" name="p2" value="a">
+Para realizar cálculos
+</label>
+
+<label>
+<input type="radio" name="p2" value="b">
+Para navegar por Internet
+</label>
+
+<label>
+<input type="radio" name="p2" value="c">
+Para reproducir música
+</label>
+
+<label>
+<input type="radio" name="p2" value="d">
+Para tomar fotografías
+</label>
+
+</div>
+
+
+<!-- PREGUNTA 3 -->
+
+<div class="pregunta">
+
+<p>3. ¿Quién es considerado uno de los pioneros de las máquinas calculadoras programables?</p>
+
+<label>
+<input type="radio" name="p3" value="a">
+Charles Babbage
+</label>
+
+<label>
+<input type="radio" name="p3" value="b">
+Alexander Graham Bell
+</label>
+
+<label>
+<input type="radio" name="p3" value="c">
+Thomas Edison
+</label>
+
+<label>
+<input type="radio" name="p3" value="d">
+Nikola Tesla
+</label>
+
+</div>
+
+
+<!-- PREGUNTA 4 -->
+
+<div class="pregunta">
+
+<p>4. ¿Qué máquina diseñó Charles Babbage?</p>
+
+<label>
+<input type="radio" name="p4" value="a">
+La Máquina Analítica
+</label>
+
+<label>
+<input type="radio" name="p4" value="b">
+El transistor
+</label>
+
+<label>
+<input type="radio" name="p4" value="c">
+El teléfono
+</label>
+
+<label>
+<input type="radio" name="p4" value="d">
+El mouse
+</label>
+
+</div>
+
+
+<!-- PREGUNTA 5 -->
+
+<div class="pregunta">
+
+<p>5. ¿Quién es reconocida por desarrollar un algoritmo para la Máquina Analítica de Babbage?</p>
+
+<label>
+<input type="radio" name="p5" value="a">
+Ada Lovelace
+</label>
+
+<label>
+<input type="radio" name="p5" value="b">
+Marie Curie
+</label>
+
+<label>
+<input type="radio" name="p5" value="c">
+Rosalind Franklin
+</label>
+
+<label>
+<input type="radio" name="p5" value="d">
+Hedy Lamarr
+</label>
+
+</div>
+
+
+<!-- PREGUNTA 6 -->
+
+<div class="pregunta">
+
+<p>6. ¿Qué componente permitió fabricar computadoras más pequeñas que las primeras máquinas electrónicas?</p>
+
+<label>
+<input type="radio" name="p6" value="a">
+El transistor
+</label>
+
+<label>
+<input type="radio" name="p6" value="b">
+El monitor
+</label>
+
+<label>
+<input type="radio" name="p6" value="c">
+El teclado
+</label>
+
+<label>
+<input type="radio" name="p6" value="d">
+La impresora
+</label>
+
+</div>
+
+
+<!-- PREGUNTA 7 -->
+
+<div class="pregunta">
+
+<p>7. ¿Qué característica distingue a una computadora?</p>
+
+<label>
+<input type="radio" name="p7" value="a">
+Puede procesar información siguiendo instrucciones
+</label>
+
+<label>
+<input type="radio" name="p7" value="b">
+Solamente sirve para jugar
+</label>
+
+<label>
+<input type="radio" name="p7" value="c">
+Funciona sin energía
+</label>
+
+<label>
+<input type="radio" name="p7" value="d">
+No puede almacenar información
+</label>
+
+</div>
+
+
+<!-- PREGUNTA 8 -->
+
+<div class="pregunta">
+
+<p>8. ¿Qué es el hardware?</p>
+
+<label>
+<input type="radio" name="p8" value="a">
+Las partes físicas de una computadora
+</label>
+
+<label>
+<input type="radio" name="p8" value="b">
+Los programas de una computadora
+</label>
+
+<label>
+<input type="radio" name="p8" value="c">
+La información de Internet
+</label>
+
+<label>
+<input type="radio" name="p8" value="d">
+Una red social
+</label>
+
+</div>
+
+
+<!-- PREGUNTA 9 -->
+
+<div class="pregunta">
+
+<p>9. ¿Qué es el software?</p>
+
+<label>
+<input type="radio" name="p9" value="a">
+El conjunto de programas e instrucciones
+</label>
+
+<label>
+<input type="radio" name="p9" value="b">
+La carcasa de la computadora
+</label>
+
+<label>
+<input type="radio" name="p9" value="c">
+El cable de alimentación
+</label>
+
+<label>
+<input type="radio" name="p9" value="d">
+El monitor
+</label>
+
+</div>
+
+
+<!-- PREGUNTA 10 -->
+
+<div class="pregunta">
+
+<p>10. ¿Cuál ha sido una tendencia importante en la evolución de las computadoras?</p>
+
+<label>
+<input type="radio" name="p10" value="a">
+Mayor capacidad de procesamiento en dispositivos cada vez más pequeños
+</label>
+
+<label>
+<input type="radio" name="p10" value="b">
+Eliminar completamente los programas
+</label>
+
+<label>
+<input type="radio" name="p10" value="c">
+Dejar de utilizar electricidad
+</label>
+
+<label>
+<input type="radio" name="p10" value="d">
+Hacerlas exclusivamente mecánicas
+</label>
+
+</div>
+
+
+<!-- ========================= -->
+<!-- ROBÓTICA -->
+<!-- ========================= -->
+
+<div class="seccion">
+
+<h2>PARTE II — ROBÓTICA</h2>
+
+<p>
+Preguntas 11 a 20
+</p>
+
+</div>
+
+
+<!-- PREGUNTA 11 -->
+
+<div class="pregunta">
+
+<p>11. ¿Qué es un robot?</p>
+
+<label>
+<input type="radio" name="p11" value="a">
+Una máquina programable capaz de realizar determinadas tareas
+</label>
+
+<label>
+<input type="radio" name="p11" value="b">
+Cualquier objeto de metal
+</label>
+
+<label>
+<input type="radio" name="p11" value="c">
+Un videojuego
+</label>
+
+<label>
+<input type="radio" name="p11" value="d">
+Una computadora sin programas
+</label>
+
+</div>
+
+
+<!-- PREGUNTA 12 -->
+
+<div class="pregunta">
+
+<p>12. ¿Cuál es una función de un robot?</p>
+
+<label>
+<input type="radio" name="p12" value="a">
+Realizar tareas programadas
+</label>
+
+<label>
+<input type="radio" name="p12" value="b">
+Pensar exactamente como un ser humano
+</label>
+
+<label>
+<input type="radio" name="p12" value="c">
+Existir únicamente como juguete
+</label>
+
+<label>
+<input type="radio" name="p12" value="d">
+Funcionar siempre sin energía
+</label>
+
+</div>
+
+
+<!-- PREGUNTA 13 -->
+
+<div class="pregunta">
+
+<p>13. ¿Qué elemento permite a un robot detectar información de su entorno?</p>
+
+<label>
+<input type="radio" name="p13" value="a">
+Sensor
+</label>
+
+<label>
+<input type="radio" name="p13" value="b">
+Rueda
+</label>
+
+<label>
+<input type="radio" name="p13" value="c">
+Tornillo
+</label>
+
+<label>
+<input type="radio" name="p13" value="d">
+Carcasa
+</label>
+
+</div>
+
+
+<!-- PREGUNTA 14 -->
+
+<div class="pregunta">
+
+<p>14. ¿Cuál de los siguientes es un ejemplo de sensor?</p>
+
+<label>
+<input type="radio" name="p14" value="a">
+Sensor de distancia
+</label>
+
+<label>
+<input type="radio" name="p14" value="b">
+Motor
+</label>
+
+<label>
+<input type="radio" name="p14" value="c">
+Engranaje
+</label>
+
+<label>
+<input type="radio" name="p14" value="d">
+Rueda
+</label>
+
+</div>
+
+
+<!-- PREGUNTA 15 -->
+
+<div class="pregunta">
+
+<p>15. ¿Qué elemento permite que un robot produzca movimiento?</p>
+
+<label>
+<input type="radio" name="p15" value="a">
+Actuador o motor
+</label>
+
+<label>
+<input type="radio" name="p15" value="b">
+Sensor de luz
+</label>
+
+<label>
+<input type="radio" name="p15" value="c">
+Micrófono
+</label>
+
+<label>
+<input type="radio" name="p15" value="d">
+Cámara
+</label>
+
+</div>
+
+
+<!-- PREGUNTA 16 -->
+
+<div class="pregunta">
+
+<p>16. ¿Por qué se programa un robot?</p>
+
+<label>
+<input type="radio" name="p16" value="a">
+Para indicarle qué acciones debe realizar
+</label>
+
+<label>
+<input type="radio" name="p16" value="b">
+Para cambiar su color
+</label>
+
+<label>
+<input type="radio" name="p16" value="c">
+Para eliminar sus sensores
+</label>
+
+<label>
+<input type="radio" name="p16" value="d">
+Para evitar que utilice energía
+</label>
+
+</div>
+
+
+<!-- PREGUNTA 17 -->
+
+<div class="pregunta">
+
+<p>17. ¿Cuál es un ejemplo de aplicación de la robótica?</p>
+
+<label>
+<input type="radio" name="p17" value="a">
+Robots utilizados en líneas de producción
+</label>
+
+<label>
+<input type="radio" name="p17" value="b">
+Un cuaderno
+</label>
+
+<label>
+<input type="radio" name="p17" value="c">
+Un lápiz
+</label>
+
+<label>
+<input type="radio" name="p17" value="d">
+Una regla
+</label>
+
+</div>
+
+
+<!-- PREGUNTA 18 -->
+
+<div class="pregunta">
+
+<p>18. ¿Qué debe hacer un robot para responder a un cambio en su entorno?</p>
+
+<label>
+<input type="radio" name="p18" value="a">
+Detectarlo mediante sensores y ejecutar una acción programada
+</label>
+
+<label>
+<input type="radio" name="p18" value="b">
+Ignorarlo siempre
+</label>
+
+<label>
+<input type="radio" name="p18" value="c">
+Apagarse necesariamente
+</label>
+
+<label>
+<input type="radio" name="p18" value="d">
+Eliminar su programa
+</label>
+
+</div>
+
+
+<!-- PREGUNTA 19 -->
+
+<div class="pregunta">
+
+<p>19. ¿Cuál es una ventaja de utilizar robots en determinadas actividades?</p>
+
+<label>
+<input type="radio" name="p19" value="a">
+Pueden realizar tareas repetitivas con precisión
+</label>
+
+<label>
+<input type="radio" name="p19" value="b">
+Nunca necesitan programación
+</label>
+
+<label>
+<input type="radio" name="p19" value="c">
+No requieren energía
+</label>
+
+<label>
+<input type="radio" name="p19" value="d">
+Pueden hacer cualquier tarea sin instrucciones
+</label>
+
+</div>
+
+
+<!-- PREGUNTA 20 -->
+
+<div class="pregunta">
+
+<p>20. ¿Cuál es la relación entre computación y robótica?</p>
+
+<label>
+<input type="radio" name="p20" value="a">
+La computación permite programar y controlar sistemas robóticos
+</label>
+
+<label>
+<input type="radio" name="p20" value="b">
+No tienen ninguna relación
+</label>
+
+<label>
+<input type="radio" name="p20" value="c">
+Los robots no necesitan información
+</label>
+
+<label>
+<input type="radio" name="p20" value="d">
+La computación solamente sirve para escribir documentos
+</label>
+
+</div>
+
+
+<button onclick="calificar()">
+CALIFICAR EXAMEN
+</button>
+
+
+<div id="resultado"></div>
+
+</div>
+
+
+<script>
+
+function calificar() {
+
+    let respuestasCorrectas = {
+
+        p1: "a",
+        p2: "a",
+        p3: "a",
+        p4: "a",
+        p5: "a",
+        p6: "a",
+        p7: "a",
+        p8: "a",
+        p9: "a",
+        p10: "a",
+
+        p11: "a",
+        p12: "a",
+        p13: "a",
+        p14: "a",
+        p15: "a",
+        p16: "a",
+        p17: "a",
+        p18: "a",
+        p19: "a",
+        p20: "a"
+    };
+
+
+    let aciertos = 0;
+
+    let contestadas = 0;
+
+
+    for (let pregunta in respuestasCorrectas) {
+
+        let respuesta =
+            document.querySelector(
+                'input[name="' + pregunta + '"]:checked'
+            );
+
+
+        if (respuesta) {
+
+            contestadas++;
+
+            if (respuesta.value === respuestasCorrectas[pregunta]) {
+
+                aciertos++;
+
+                respuesta.parentElement.classList.add("correcta");
+
+            } else {
+
+                respuesta.parentElement.classList.add("incorrecta");
+
+            }
+
+        }
+
+    }
+
+
+    let calificacion =
+        (aciertos / 20) * 10;
+
+
+    let resultado =
+        document.getElementById("resultado");
+
+
+    resultado.style.display = "block";
+
+
+    let nombre =
+        document.getElementById("nombre").value;
+
+
+    if (nombre === "") {
+
+        nombre = "Alumno";
+
+    }
+
+
+    resultado.innerHTML =
+
+        "RESULTADO DE " + nombre +
+        "<br><br>" +
+
+        "Aciertos: " + aciertos + " de 20" +
+        "<br>" +
+
+        "Preguntas contestadas: " +
+        contestadas + " de 20" +
+        "<br><br>" +
+
+        "Calificación: " +
+        calificacion.toFixed(1) +
+        " / 10";
+
+
+    window.scrollTo({
+
+        top: document.body.scrollHeight,
+
+        behavior: "smooth"
+
+    });
+
+}
+
+</script>
+
+</body>
+  </html>
